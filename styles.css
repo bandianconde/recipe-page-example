@@ -1,0 +1,260 @@
+
+
+@font-face {
+    font-family: outfit;
+    src:url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: young-serif;
+    src:url("./assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+    
+body {
+    font-family: outfit;
+    color: hsl(30, 10%, 34%);
+    background-color: hsl(30, 54%, 90%);
+}
+@media screen and (min-width: 768px) {
+    div#main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-width: calc(736px - 80px);
+        width: calc(736px - 80px);
+        margin: auto;
+        padding-left: 40px;
+        padding-right: 40px;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 24px;;
+    }
+
+    div#image-omlette{
+        flex-basis: 300px;
+        align-self: flex-end;
+        min-height: 300px;
+        width: 100%;
+        margin-top: 40px;
+    }
+
+}
+
+@media screen and (max-width: 768px) and (min-width: 375px){
+    div#main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-width: 80%;
+        width: 80%;
+        margin: auto;
+        padding-left: 40px;
+        padding-right: 40px;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 24px;;
+    }
+
+    div#image-omlette{
+        align-self: flex-end;
+        width: 100%;
+        margin-top: 40px;
+    }
+
+}
+@media screen and (max-width: 375px) {
+    div#main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-width: 100%;
+        width: 100%;
+        margin:auto;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 24px;;
+    }
+
+    div#image-omlette{
+        flex-basis: 171px;
+        align-self: stretch;
+        min-height: 171px;
+        width: 100%;
+        max-width: 100%;
+        margin-top: 40px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+}
+
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 24px;
+
+}
+h1 {
+    color: hsl(24, 5%, 18%);
+    font-family: young-serif;
+    font-size: 40px
+}
+
+div#preparation {
+    background-color: hsl(330, 100%, 98%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-top: 32px;
+
+}
+
+div#preparation h3 {
+    margin-top: 24px;
+    margin-bottom: 0px;
+    color: hsl(332, 51%, 32%);
+}
+div#preparation ul {
+    margin-bottom: 24px;
+    list-style: none;     /* Remove default bullets */
+    padding-left: 0;      /* Remove default padding */
+}
+
+div#preparation ul  li::before {
+    content: "•";         /* Custom bullet */
+    color: black;         /* Bullet color */
+    display: inline-block;
+    width: 40px;          /* Space reserved for bullet */
+    margin-left: 0;       
+  }
+
+div#preparation ul  li{
+     margin-bottom: 10px;
+}
+
+
+div#ingredients {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 32px
+}
+
+div#ingredients h2 {
+    margin-top: 0px;
+    margin-bottom: 24px;
+    font-family: young-serif;
+    color: hsl(14, 45%, 36%)
+}
+
+div#ingredients ul {
+    align-self: flex-start;
+    margin-top: 0px;
+    margin-bottom: 24px;
+    list-style: none;     /* Remove default bullets */
+    padding-left: 0;      /* Remove default padding */
+}
+
+div#ingredients ul  li::before {
+    content: "•";         /* Custom bullet */
+    color: black;         /* Bullet color */
+    display: inline-block;
+    width: 40px;          /* Space reserved for bullet */
+    margin-left: 5px;       
+  }
+
+div#ingredients ul  li{
+    margin-bottom: 10px;
+}
+
+div#instructions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 32px;
+    background-color: hsl(30, 18%, 87%);
+    margin-bottom: 40px;
+}
+div#instructions h2{
+    margin-top: 0px;
+    margin-bottom: 24px;
+    font-family: young-serif;
+    color: hsl(14, 45%, 36%);
+
+}
+
+div#instructions ol {
+    align-self: flex-start;
+    margin-top: 0px;
+    margin-bottom: 24px;
+    list-style: none;     
+    padding-left: 0;      
+    counter-reset: item; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+div#instructions ol  li{
+    counter-increment: item;
+    position: relative;
+    padding-left: 30px;      /* Space between number and text */
+    margin-bottom: 8px;
+}
+
+div#instructions ol  li::before{
+content: counter(item) ".";
+  position: absolute;
+  color:  hsl(14, 45%, 36%);
+  font-weight: bold;
+  left: 0;
+  padding-left: 0;
+  width: 10px;               /* Width of the number + dot area */
+  text-align: right;        /* Align number right, so dot is aligned */
+  font-variant-numeric: tabular-nums;  /* Optional: aligns digits */
+}
+    
+
+
+div#nutrition h2{
+    margin-top: 0px;
+    margin-bottom: 24px;
+    color: hsl(14, 45%, 36%);
+}
+div#nutrition p{
+    margin-top: 0px;
+    margin-bottom: 24px;
+}
+div#nutrition table {
+    width: 100%;
+}
+div#nutrition tbody{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+ }
+div#nutrition tr{
+   display: flex;
+   justify-content: space-around;
+}
+div#nutrition tr td{
+    display: inline-block;
+    width: 50%;
+    padding-left: 30px;
+    font-weight: 600;
+    color: hsl(14, 45%, 36%);
+
+ }
+ div#nutrition tr th{
+    display: inline-block;
+    width: 50%;
+    padding-left: 30px;
+    font-weight: normal;
+ }
+.spacer {
+    height: 1px;
+    background-color: hsl(30, 10%, 34%);
+    margin-top: 10px;
+    margin-bottom: 10px;
+ }
